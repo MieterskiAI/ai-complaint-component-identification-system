@@ -15,6 +15,11 @@ Incomplete information, fragmented data sources, and time pressure often lead to
 The problem is not a lack of data, but the lack of structured decision support that helps eliminate incorrect options before a final human decision is made.
 
 ## Solution Concept
+The system is designed as a lightweight decision-support layer on top of existing operational data.
+
+Instead of replacing human judgment, it focuses on structuring available information and eliminating incompatible component options based on order details, delivery data, and component compatibility rules.
+
+AI is used exclusively to analyze context and narrow down possible components, providing reasoning that supports faster and more accurate human decisions.
 
 ## System Architecture
 
