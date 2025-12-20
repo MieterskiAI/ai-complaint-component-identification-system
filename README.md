@@ -42,6 +42,11 @@ AI is integrated as an analytical component responsible for eliminating incompat
 8. A human operator makes the final decision based on the AI-provided context.
 
 ## Role of AI vs Human
+The AI component acts strictly as a decision-support tool.
+
+Its role is limited to analyzing structured and unstructured inputs, eliminating incompatible component options, and providing transparent reasoning.
+
+The final responsibility for selecting the replacement component remains entirely with the human operator, ensuring accountability, safety, and operational control.
 
 ## Example Case
 
