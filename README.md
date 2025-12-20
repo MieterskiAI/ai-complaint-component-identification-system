@@ -49,6 +49,11 @@ Its role is limited to analyzing structured and unstructured inputs, eliminating
 The final responsibility for selecting the replacement component remains entirely with the human operator, ensuring accountability, safety, and operational control.
 
 ## Example Case
+An example complaint was registered for an order with a reported issue described as "device not responding".
+
+Based on the order model, delivery details, and available component reference data, the AI eliminated incompatible components and suggested the Control Board as a potential match.
+
+The suggestion was accompanied by clear reasoning, allowing the human operator to review the context and make the final decision.
 
 ## Why This Design Is Safe and Realistic
 
