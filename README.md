@@ -22,6 +22,14 @@ Instead of replacing human judgment, it focuses on structuring available informa
 AI is used exclusively to analyze context and narrow down possible components, providing reasoning that supports faster and more accurate human decisions.
 
 ## System Architecture
+### Data Layer
+Google Sheets is used as the single source of truth, storing structured data for orders, delivered products, components, and complaints. Each dataset is separated into dedicated sheets to ensure clarity and traceability.
+
+### Automation Layer
+Zapier orchestrates the end-to-end workflow, reacting to complaint entries, retrieving related order and delivery data, and coordinating AI analysis without manual intervention.
+
+### AI Layer
+AI is integrated as an analytical component responsible for eliminating incompatible components and generating structured reasoning. It does not make final decisions or trigger downstream actions autonomously.
 
 ## End-to-End Process Flow
 
