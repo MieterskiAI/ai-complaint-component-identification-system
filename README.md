@@ -56,5 +56,10 @@ Based on the order model, delivery details, and available component reference da
 The suggestion was accompanied by clear reasoning, allowing the human operator to review the context and make the final decision.
 
 ## Why This Design Is Safe and Realistic
+The system is designed with clear boundaries between automation, analysis, and decision-making.
+
+AI does not execute actions or make final selections, which reduces the risk of incorrect outcomes and ensures full human accountability.
+
+All decisions are traceable, data-driven, and reversible, making the solution suitable for real operational environments rather than experimental use cases.
 
 ## What This Project Is Not
