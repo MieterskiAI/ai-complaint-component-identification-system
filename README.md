@@ -32,6 +32,14 @@ Zapier orchestrates the end-to-end workflow, reacting to complaint entries, retr
 AI is integrated as an analytical component responsible for eliminating incompatible components and generating structured reasoning. It does not make final decisions or trigger downstream actions autonomously.
 
 ## End-to-End Process Flow
+1. A complaint is registered in the Complaints sheet and marked as ready for analysis using a control flag.
+2. The automation is triggered and retrieves related order data based on the provided Order ID.
+3. Delivery details are fetched to confirm the exact product version and delivered product code.
+4. All potentially compatible components are retrieved from the reference dataset.
+5. AI analyzes the complaint description and available data to eliminate incompatible components.
+6. The system generates one or two suggested components along with structured reasoning.
+7. The AI-generated suggestion is written back to the complaint record for human review.
+8. A human operator makes the final decision based on the AI-provided context.
 
 ## Role of AI vs Human
 
