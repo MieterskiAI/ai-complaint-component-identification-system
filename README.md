@@ -63,3 +63,8 @@ AI does not execute actions or make final selections, which reduces the risk of 
 All decisions are traceable, data-driven, and reversible, making the solution suitable for real operational environments rather than experimental use cases.
 
 ## What This Project Is Not
+This project is not an autonomous decision-making system or a predictive AI model.
+
+It does not replace human expertise, automate responsibility, or operate as a conversational chatbot.
+
+Its purpose is to support structured decision-making in operational workflows by reducing uncertainty and eliminating incorrect options.
