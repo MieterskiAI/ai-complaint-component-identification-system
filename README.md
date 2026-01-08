@@ -65,16 +65,6 @@ The AI-generated context is written back to the complaint record for final human
 
 ---
 
-## 📁 Repository Structure
-
-📦 complaint-component-identification  
-├── README.md  
-├── prompts.md  
-└── docs/  
-&nbsp;&nbsp;&nbsp;&nbsp;└── zapier_steps.md  
-
----
-
 ## ⚡ Why This Project Matters
 
 After-sales teams operate under constant pressure to resolve complaints quickly and accurately.
