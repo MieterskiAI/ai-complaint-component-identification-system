@@ -1,70 +1,114 @@
-# AI-Assisted Complaint & Component Identification System
+# Complaint & Component Identification – Decision-Support System for After-Sales Operations
 
-## Project Overview
-This project demonstrates an AI-assisted decision-support system designed to help operational teams identify potentially relevant components during product complaint handling.
+Designing human-centered workflows that support accurate component selection during product complaint handling.
 
-The system does not automate decisions. Instead, it uses AI to eliminate incorrect component paths and provide structured reasoning, while keeping the final responsibility fully in human hands.
+## 🧠 Business Context
 
-Google Sheets serves as the single source of truth for orders, deliveries, components, and complaints, while Zapier orchestrates the end-to-end process.
+In after-sales operations, product complaints often require fast and precise identification of replacement components.  
+Time pressure, fragmented data sources and incomplete information lead to wrong decisions, repeated logistics cycles and increased operational costs.
 
-## Business Problem
-In many operational environments, product complaints require fast identification of the correct replacement component.
+This project is not about automating responsibility.
 
-Incomplete information, fragmented data sources, and time pressure often lead to incorrect component selection. This results in unnecessary logistics costs, extended resolution times, and repeated service cycles.
+It is about designing a decision-support workflow that helps employees:
+- understand the real context of each complaint,
+- eliminate incompatible component options,
+- and make confident final decisions.
 
-The problem is not a lack of data, but the lack of structured decision support that helps eliminate incorrect options before a final human decision is made.
+## 🔁 Before / After
 
-## Solution Concept
-The system is designed as a lightweight decision-support layer on top of existing operational data.
+**Before**
+- manual complaint triage  
+- high risk of selecting wrong components  
+- repeated logistics cycles  
+- operational knowledge locked in individuals  
 
-Instead of replacing human judgment, it focuses on structuring available information and eliminating incompatible component options based on order details, delivery data, and component compatibility rules.
+**After**
+- structured elimination of incompatible components  
+- transparent reasoning for every suggestion  
+- faster resolution time  
+- reduced operational uncertainty  
 
-AI is used exclusively to analyze context and narrow down possible components, providing reasoning that supports faster and more accurate human decisions.
+## 🔄 Decision Flow
 
-## System Architecture
-### Data Layer
-Google Sheets is used as the single source of truth, storing structured data for orders, delivered products, components, and complaints. Each dataset is separated into dedicated sheets to ensure clarity and traceability.
+Complaint Entry  
+→ Context & Data Retrieval  
+→ AI Elimination of Incompatible Components  
+→ Suggested Options + Reasoning  
+→ Human Final Decision
 
-### Automation Layer
-Zapier orchestrates the end-to-end workflow, reacting to complaint entries, retrieving related order and delivery data, and coordinating AI analysis without manual intervention.
+## 🤝 Human-in-the-Loop
 
-### AI Layer
-AI is integrated as an analytical component responsible for eliminating incompatible components and generating structured reasoning. It does not make final decisions or trigger downstream actions autonomously.
+This system never selects or dispatches components automatically.  
+AI narrows down possible options and provides structured reasoning, but the final responsibility always remains with the human operator.
 
-## End-to-End Process Flow
-1. A complaint is registered in the Complaints sheet and marked as ready for analysis using a control flag.
-2. The automation is triggered and retrieves related order data based on the provided Order ID.
-3. Delivery details are fetched to confirm the exact product version and delivered product code.
-4. All potentially compatible components are retrieved from the reference dataset.
-5. AI analyzes the complaint description and available data to eliminate incompatible components.
-6. The system generates one or two suggested components along with structured reasoning.
-7. The AI-generated suggestion is written back to the complaint record for human review.
-8. A human operator makes the final decision based on the AI-provided context.
+---
 
-## Role of AI vs Human
-The AI component acts strictly as a decision-support tool.
+## How the Pipeline Works
 
-Its role is limited to analyzing structured and unstructured inputs, eliminating incompatible component options, and providing transparent reasoning.
+**1. Complaint Registration**  
+A complaint is registered in the Complaints sheet and marked as ready for analysis.
 
-The final responsibility for selecting the replacement component remains entirely with the human operator, ensuring accountability, safety, and operational control.
+**2. Context Retrieval**  
+The automation retrieves related order, delivery and product data based on Order ID.
 
-## Example Case
-An example complaint was registered for an order with a reported issue described as "device not responding".
+**3. Component Candidate Retrieval**  
+All potentially compatible components are loaded from the reference dataset.
 
-Based on the order model, delivery details, and available component reference data, the AI eliminated incompatible components and suggested the Control Board as a potential match.
+**4. AI Analysis**  
+AI analyzes complaint description and structured data to eliminate incompatible components.
 
-The suggestion was accompanied by clear reasoning, allowing the human operator to review the context and make the final decision.
+**5. Suggested Options + Reasoning**  
+One or two most likely components are proposed together with clear reasoning.
 
-## Why This Design Is Safe and Realistic
-The system is designed with clear boundaries between automation, analysis, and decision-making.
+**6. Human Review**  
+The AI-generated context is written back to the complaint record for final human decision.
 
-AI does not execute actions or make final selections, which reduces the risk of incorrect outcomes and ensures full human accountability.
+---
 
-All decisions are traceable, data-driven, and reversible, making the solution suitable for real operational environments rather than experimental use cases.
+## 📁 Repository Structure
 
-## What This Project Is Not
-This project is not an autonomous decision-making system or a predictive AI model.
+📦 complaint-component-identification  
+├── README.md  
+├── prompts.md  
+└── docs/  
+&nbsp;&nbsp;&nbsp;&nbsp;└── zapier_steps.md  
 
-It does not replace human expertise, automate responsibility, or operate as a conversational chatbot.
+---
 
-Its purpose is to support structured decision-making in operational workflows by reducing uncertainty and eliminating incorrect options.
+## ⚡ Why This Project Matters
+
+After-sales teams operate under constant pressure to resolve complaints quickly and accurately.
+
+This system supports operational decision making by:
+- reducing the risk of incorrect component selection  
+- shortening resolution cycles  
+- lowering logistics and re-dispatch costs  
+- making decision logic transparent and auditable  
+
+Perfect for:
+- customer support  
+- technical service teams  
+- warranty and repair departments  
+- manufacturing companies  
+
+---
+
+## 📌 Future Improvements
+
+- integration with ERP / CRM systems  
+- automated detection of missing complaint data  
+- advanced compatibility rules  
+- multi-language complaint analysis  
+
+---
+
+## 👤 Author
+
+**MieterskiAI**  
+Junior AI Process & Decision Support Designer — designing human-centered AI workflows that help organizations regain control over complex operational processes.
+
+---
+
+## ⭐ Support
+
+If this project was helpful, leave a ⭐ on GitHub.
