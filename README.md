@@ -5,7 +5,7 @@ Human-in-the-loop decision support for after-sales complaint handling. The syste
 > **Note:** All examples in this repo are **synthetic/anonymized** and contain no real customer data.
 
 ## Suggested GitHub About & Topics
-- **GitHub About (1 line):** Human-in-the-loop complaint triage: narrows component options, explains reasoning, and supports operator decision (no auto-dispatch).
+- **GitHub About (1 line):** Human-in-the-loop complaint triage: narrows component options, explains reasoning, supports operator decision (no auto-dispatch).
 - **Topics (tags):** decision-support, human-in-the-loop, complaints, triage, process-design, kpi, evaluation, data-quality, portfolio
 
 _Note: About/Topics are set in the GitHub UI (not via git)._
