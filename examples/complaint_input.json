@@ -1,0 +1,72 @@
+{
+  "schema": {
+    "complaint_id": "string",
+    "order_id": "string",
+    "product_sku": "string",
+    "purchase_date": "YYYY-MM-DD",
+    "delivery_date": "YYYY-MM-DD",
+    "customer_region": "string",
+    "symptoms": ["string"],
+    "complaint_text": "string",
+    "attachments": ["string"],
+    "warranty_status": "in_warranty | out_of_warranty | unknown",
+    "environment": {
+      "installation_type": "string",
+      "usage_frequency": "low | medium | high",
+      "operating_conditions": "string"
+    }
+  },
+  "examples": [
+    {
+      "complaint_id": "CMP-2025-0007",
+      "order_id": "ORD-44712",
+      "product_sku": "HV-2000-AX",
+      "purchase_date": "2024-11-18",
+      "delivery_date": "2024-11-22",
+      "customer_region": "EU-NORTH",
+      "symptoms": ["intermittent start", "high vibration"],
+      "complaint_text": "Device starts after 2–3 attempts, vibration increases after 10 minutes of use. Noise appears when load exceeds 70%.",
+      "attachments": ["video.mp4"],
+      "warranty_status": "in_warranty",
+      "environment": {
+        "installation_type": "wall-mounted",
+        "usage_frequency": "medium",
+        "operating_conditions": "indoor, dry, 18–24°C"
+      }
+    },
+    {
+      "complaint_id": "CMP-2025-0011",
+      "order_id": "ORD-45109",
+      "product_sku": "PMP-320-Z",
+      "purchase_date": "2024-08-05",
+      "delivery_date": "2024-08-12",
+      "customer_region": "EU-CENTRAL",
+      "symptoms": ["leak", "pressure drop"],
+      "complaint_text": "After 3 weeks, pressure drops by ~30% and liquid is visible near the rear seal. Occurs only during continuous operation.",
+      "attachments": ["photo_1.jpg", "photo_2.jpg"],
+      "warranty_status": "unknown",
+      "environment": {
+        "installation_type": "floor-mounted",
+        "usage_frequency": "high",
+        "operating_conditions": "indoor, 20–26°C, continuous duty"
+      }
+    },
+    {
+      "complaint_id": "CMP-2025-0019",
+      "order_id": "ORD-45988",
+      "product_sku": "DRV-110-S",
+      "purchase_date": "2025-01-03",
+      "delivery_date": "2025-01-10",
+      "customer_region": "EU-WEST",
+      "symptoms": ["overheating", "shutdown"],
+      "complaint_text": "Unit overheats within 15 minutes and shuts down. Fan is running but airflow seems low.",
+      "attachments": [],
+      "warranty_status": "in_warranty",
+      "environment": {
+        "installation_type": "rack-mounted",
+        "usage_frequency": "high",
+        "operating_conditions": "indoor, 22–28°C, low dust"
+      }
+    }
+  ]
+}
