@@ -1,46 +1,66 @@
-# Complaint & Component Identification – Decision-Support Automation
+# AI Complaint Component Identification System
 
-Human-in-the-loop decision support for after-sales complaint handling. The system **does not dispatch parts automatically** — it narrows down options and explains reasoning so an operator can decide.
+Workflow automation case study for complaint triage and component decision routing with a human-in-the-loop final gate.
 
-> **Note:** All examples in this repo are **synthetic/anonymized** and contain no real customer data.
+## Recommended GitHub repo description (1 line)
+Decision-routing workflow for complaint triage that identifies likely components, routes edge cases, and keeps a human approval gate.
 
-## Suggested GitHub About & Topics
-- **GitHub About (1 line):** Human-in-the-loop complaint triage: narrows component options, explains reasoning, supports operator decision (no auto-dispatch).
-- **Topics (tags):** decision-support, human-in-the-loop, complaints, triage, process-design, kpi, evaluation, data-quality, portfolio
+## Recommended GitHub topics
+- power-platform
+- power-automate
+- power-apps
+- workflow
+- process-automation
+- requirements
+- operations
+- human-in-the-loop
+- portfolio
 
-_Note: About/Topics are set in the GitHub UI (not via git)._
+## Problem
+After-sales teams lose time when complaint intake is inconsistent and component decisions are made with partial context.
+Wrong or delayed routing increases rework and slows final resolution.
 
-## What this is
-- **Type:** Automation workflow (Zapier/Make-style) for complaint triage and component identification.
-- **Goal:** Reduce wrong-part selection and speed up decision-making with transparent reasoning.
-- **Human-in-the-loop:** AI suggests, human decides.
+## Solution
+- Standardize complaint intake into a structured case payload.
+- Validate required fields before the case can move forward.
+- Classify complaint type and narrow down likely components.
+- Route low-confidence or ambiguous cases to human review.
+- Log every decision step for auditability and process improvement.
 
-## Quick Start / Demo (no system required)
-See a complete, realistic walkthrough in under 2 minutes:
-1. **Input examples:** `examples/complaint_input.json`
-2. **AI-style analysis output:** `examples/analysis_output.md`
-3. **Operator checklist:** `examples/operator_checklist.md`
+## Workflow
+See full diagram in [`docs/workflow.md`](docs/workflow.md).
 
-## Architecture & Evaluation
-- **System flow + Mermaid diagram:** `docs/architecture.md`
-- **Evaluation rubric (correct/acceptable/wrong):** `docs/evaluation.md`
-- **Pilot KPIs + how to measure:** `docs/kpi_pilot.md`
+## Inputs / Outputs
+**Inputs**
+- Complaint text + customer context
+- Product/model identifiers
+- Known issue metadata (if available)
 
-## Decision Flow (summary)
-Complaint Entry → Context/Data Retrieval → Candidate Components → AI Elimination → Suggested Options + Reasoning → **Human Final Decision** → Write-back to system
+**Outputs**
+- Classified complaint category
+- Suggested component candidates
+- Recommended next action (auto-route or human review)
+- Final human-validated decision record
 
-## Example Assets
-| Asset | Description |
-| --- | --- |
-| `screenshots/complaints-example.png` | Example complaint record for analysis. |
-| `screenshots/zapier-flow.png` | Automation flow overview. |
+## Edge cases
+See [`docs/edge-cases.md`](docs/edge-cases.md).
 
-## Future Improvements (non-core)
-- ERP/CRM integration
-- Missing data detection
-- Advanced compatibility rules
-- Multi-language complaint analysis
+## KPIs
+See [`docs/metrics.md`](docs/metrics.md). All KPI values are planned measurements unless baseline data is provided.
 
----
+## Quick demo
+- Example intake payload: [`examples/complaint_input.json`](examples/complaint_input.json)
+- Example decision output: [`examples/analysis_output.md`](examples/analysis_output.md)
+- Operator review checklist: [`examples/operator_checklist.md`](examples/operator_checklist.md)
+- Visual flow assets: [`screenshots/`](screenshots/)
 
-**Author:** MieterskiAI — Junior Operations / Process Analyst (Decision Support, human-in-the-loop)
+## How to implement this in Power Platform
+- **Power Apps**: build a guided intake form with required fields and validation prompts.
+- **Power Automate**: orchestrate routing, confidence thresholds, logging, and escalation paths.
+- **SharePoint or Dataverse**: store case records, decision history, and status transitions.
+- **Teams + Approvals**: trigger human-in-the-loop review for ambiguous/high-risk cases before final decision.
+
+## What this proves
+- I can convert an unstructured ops problem into a repeatable workflow with clear gates.
+- I can design decision-routing logic with human oversight, not black-box automation.
+- I can define measurable operational KPIs and an implementation path in Microsoft Power Platform.
